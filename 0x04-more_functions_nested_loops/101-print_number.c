@@ -1,27 +1,19 @@
-#include "main.h"
 #include <stdio.h>
-#include "unistd.h"
 
 /**
- * print_number - function that prints an intege
- * @n: integer to be printed
- * print_number -print an integer
- * Return:void
+ * main - print prime
+ * printf -prints output
+ * Return: 0
  */
-
-void print_number(int n)
+int main(void)
 {
+	unsigned long int i = 3, n = 612852475143;
 
-	unsigned int num = n;
-
-	if (n < 0)
+	for (; i < 12057; i += 2)
 	{
-		putchar('-');
-		num = -num;
+		while (n % i == 0 && n != i)
+			n /= i;
 	}
-
-	if ((num / 10) > 0)
-		print_numbers(num / 10);
-
-	putchar((num % 10) + '0');
+	printf("%lu\n", n);
+	return (0);
 }
