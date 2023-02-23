@@ -4,7 +4,7 @@
 
 /**
  * print_square -prints a square, followed by a new line
- * @int size: Size of the square
+ * @size: Size of the square
  * Return: 0 Always
  */
 
