@@ -1,13 +1,20 @@
 #include "main.h"
-void _puts(char *str)
+#include "unistd.h"
 #include<stdio.h>
+
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ *_puts - prints a string, to stdout
+ *@str: value to be evaluate.
+ *Return: not.
  */
-int main(void)
+void _puts(char *str)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	int l = 0;
+
+	while (*(str + l) != '\0')
+	{
+		putchar(str[l]);
+		l++;
+	}
+	putchar('\n');
 }
