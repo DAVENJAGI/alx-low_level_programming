@@ -1,45 +1,44 @@
 #include "main.h"
-#include "stdlib.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * str_concat - function that concatenates two strings
- * @s1: string to get concatenated
- * @s2: string to get concatenated
- * Return: NULL on failure
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: NULL on failure otherwise point to a newly allocated space in memory
+ * which contains the concatenated string
  */
+
 char *str_concat(char *s1, char *s2)
 {
-	char *concat_str;
-	int i, ci;
+	char *s3;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
 
-	i = ci = 0;
-
-	while (s1[i] != '\0')
-		i++;
-	while (s2[ci] != '\0')
-		ci++;
-	concat_str = malloc(sizeof(char) * (i * ci * 1));
-
-	if (concat_str == NULL)
+	s3 = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (s3 == NULL)
 		return (NULL);
-	i = ci = 0;
-
-	while (s1[i] != '\0')
+	if (s1)
 	{
-		concat_str[i] = s1[i];
-		i++;
+		while (i < len1)
+		{
+			s3[i] = s1[i];
+			i++;
+		}
 	}
-		while (s2[ci] != '\0')
+	if (s2)
 	{
-		concat_str[i] = s2[ci];
-		ci++;
+		while (i < (len1 + len2))
+		{
+			s3[i] = s2[j];
+			i++;
+			j++;
+		}
 	}
-	concat_str[i] = '\0';
-	return (concat_str);
+	s3[i] = '\0';
+	return (s3);
 }
