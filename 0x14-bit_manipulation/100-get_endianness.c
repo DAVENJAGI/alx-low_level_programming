@@ -1,5 +1,4 @@
 #include  "main.h"
-#include <stdio.h>
 
 /**
  * get_endianness -function that checks the endianness.
@@ -16,6 +15,6 @@ int get_endianness(void)
 	if (*(char *)&U == 1)
 		return (1);
 
-	else 
+	else
 		return (0);
 }
