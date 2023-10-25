@@ -24,4 +24,20 @@ Task 3
 
 Task 4
 =======
+* An executable named school.
+* Rules: all, clean, 0clean, fclean, re where all builds your executable, clean deletes all Emacs and Vim files temporaty files along with executable, oclean deketes object files, fclean deletes all emacs and vim temporary files, th executable, and object files, and re forces the recimpilation of source files.
+* Variables: CC, for compiler, SRC for source, .c files, OBJ for .o files, NAME for name of executable, RM for delete files, and CFLAGS being favorite C flags, ie, -Wall -Werror -Wextra -pedantic.
+    *The all rules should recompile only updated source files.
+    *The clean, oclean, fclean, re rules shoyuld never fail.
+    *Not allowed to have a list of all the .o files
 
+Task 5
+======
+* A technical interview question.
+* Create a function def island_perimeter that returns a perimeter of island described in grid where grid is a list of integers:
+        0 represents water zone
+        1 represents land zone
+        one cell is a square with side length 1
+        grid cells are connected horrizontally/vertically not diagonally.
+        grid is rectangular, width and height don't exceed 100
+*Must be documented.
