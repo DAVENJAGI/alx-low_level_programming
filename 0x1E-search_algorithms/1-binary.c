@@ -2,13 +2,15 @@
 #include "stddef.h"
 #include "stdio.h"
 
-/*
- * binary_search - Function that searches for a value in a sorted array.
- * @value: value to search for.
- * @size: the number of elements in the array.
- * @array: pointer to the first element of the array.
+/**
+ * binary_search - searches for a value in an array of
+ * integers using the Binary search algorithm
  *
- * Return: -1 if value absent.
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
 
 int binary_search(int *array, size_t size, int value)
